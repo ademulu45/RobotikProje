@@ -1,11 +1,11 @@
 :imagesdir: Resimler
 # RobotikProje
 
-Adem ULU
+Adem ULU-120201019
 
-Gökçe EMİRBUYURAN
+Gökçe EMİRBUYURAN-
 
-Husein SKRİJELJ
+Husein SKRİJELJ-120201113
 
 == SLAM6D - Simultaneous Localization and Mapping with 6 DoF
 
