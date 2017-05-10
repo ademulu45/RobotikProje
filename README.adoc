@@ -1,7 +1,78 @@
 # RobotikProje
 
-== Adem ULU
-== Gökçe EMİRBUYURAN
-== Husein SKRİJELJ
+Adem ULU
+
+Gökçe EMİRBUYURAN
+
+Husein SKRİJELJ
 
 == SLAM6D - Simultaneous Localization and Mapping with 6 DoF
+
+Proje Hakkında Açıklama
+Bu proje, 3D nokta bulutlarını ortak bir koordinat sistemine kaydetmenin yanı sıra sahneyi görüntülemek için bir görüntüleyiciden oluşan bir yazılımdan oluşmaktadır. Kayıt için, genel olarak tutarlı bir sahne yaratmayı amaçlayan küresel gevşeme yöntemlerinin yanı sıra farklı ICP en aza indirme algoritmaları da seçilebilir. Nokta bulutları için çeşitli formatlar desteklenmekte, yeni formatlar kolayca uygulanabilmektedir.
+
+Kullandığımız işletim sistemi: Ubuntu 14.04 İndigo(Sanal Makina)
+
+Proje kaynak kodlarını elde etmek için tüm işletim sistemlerine uygun olan cmake kurulumunu yaptık.
+Ubuntu cmake kurulum komutu:
+[source,java]
+----
+sudo apt-get install cmake
+----
+Kuulum sonrası terminale aşağıdaki komut yazılarak kaynak kodları elde edildi.
+[source,java]
+----
+svn co https://svn.openslam.org/data/svn/slam6d
+----
+Kaynak kodları indirdikten sonra içerisindeki *readme.txt* ve *install.txt* dosyalarını inceledik.
+Kodları çalıştırmak için *install.txt* dosyası içeriğini takip ettik.
+
+
+
+Aşağıda bu adımlara ve bu adımları uygularken elde ettiğimiz görüntülere yer vereceğiz.
+
+*1.Adım:*
+[source,java]
+----
+echo deb http://archive.ubuntu.com/ubuntu trusty main universe | sudo tee -a /etc/apt/sources.list > /dev/null
+----
+*2.Adım:*
+sudo apt-get update
+----
+sudo apt-get install --no-install-recommends equivs subversion
+----
+*3.Adım:*
+[source,java]
+----
+cd slam6d-code
+----
+*4.Adım:*
+[source,java]
+----
+equivs-build doc/equivs/control
+----
+*5.Adım:*
+[source,java]
+----
+sudo dpkg -i 3dtk-build-deps_1.0_all.deb
+----
+*6.Adım:*
+[source,java]
+----
+sudo apt-get -f install --no-install-recommends
+----
+*7.Adım:*
+[source,java]
+----
+make
+----
+*8.Adım:*
+[source,java]
+----
+bin/slam6D dat
+----
+*9.Adım:*
+[source,java]
+----
+bin/show dat
+----
