@@ -1,4 +1,4 @@
-:imagesdir: resimler
+:imagesdir: Resimler
 # RobotikProje
 
 Adem ULU
@@ -80,4 +80,4 @@ bin/slam6D dat
 ----
 bin/show dat
 ----
-image::.png[giris,240,320,align="center"]
+image::soncikti.png[soncikti,240,320,align="center"]
