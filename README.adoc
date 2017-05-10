@@ -42,7 +42,7 @@ Aşağıda bu adımlara ve bu adımları uygularken elde ettiğimiz görüntüle
 ----
 echo deb http://archive.ubuntu.com/ubuntu trusty main universe | sudo tee -a /etc/apt/sources.list > /dev/null
 ----
-*2.Adım:*
+*2.Adım:* Güncelleme işlemi.
 [source,java]
 ----
 sudo apt-get update
@@ -51,7 +51,7 @@ sudo apt-get update
 ----
 sudo apt-get install --no-install-recommends equivs subversion
 ----
-*4.Adım:*
+*4.Adım:* Klasör değiştirme işlemi.
 [source,java]
 ----
 cd slam6d-code
@@ -76,11 +76,19 @@ sudo apt-get -f install --no-install-recommends
 ----
 make
 ----
+Bu işlem sonucu elde ettiğimiz sonuç çıktısı aşağıdadır.
+
+image::adim8.png[adim8,480,320,align="center"]
+
 *9.Adım:*
 [source,java]
 ----
 bin/slam6D dat
 ----
+Bu işlem sonucu elde ettiğimiz sonuç çıktısı aşağıdadır.
+
+image::adim9.png[adim9,480,320,align="center"]
+
 *10.Adım:*
 [source,java]
 ----
