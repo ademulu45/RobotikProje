@@ -14,9 +14,9 @@ Bu proje, 3D nokta bulutlarını ortak bir koordinat sistemine kaydetmenin yanı
 
 Projemiz ile ilgili örnek resimler:
 
-image::indoor.png[indoor,640,320,align="center"]
+image::indoor.png[indoor,480,320,align="center"]
 
-image::outdoor.png[outdoor,640,320,align="center"]
+image::outdoor.png[outdoor,480,320,align="center"]
 
 
 Kullandığımız işletim sistemi: Ubuntu 14.04 İndigo(Sanal Makina)
@@ -35,7 +35,7 @@ svn co https://svn.openslam.org/data/svn/slam6d
 Kaynak kodları indirdikten sonra içerisindeki *readme.txt* ve *install.txt* dosyalarını inceledik.
 Kodları çalıştırmak için *install.txt* dosyası içeriğini takip ettik.
 
-Aşağıda bu adımlara ve bu adımları uygularken elde ettiğimiz görüntülere yer vereceğiz.
+Aşağıda bu adımlara ve bu adımları uygularken elde ettiğimiz görüntülere yer vereceğiz. İlk adımlardaki işlemler ön hazırlık adımları olduğu için ekran görüntülerini 8. 9. ve 10. adımlarda koyduk.
 
 *1.Adım:*
 [source,java]
