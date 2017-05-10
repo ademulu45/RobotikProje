@@ -12,6 +12,13 @@ Husein SKRİJELJ
 Proje Hakkında Açıklama
 Bu proje, 3D nokta bulutlarını ortak bir koordinat sistemine kaydetmenin yanı sıra sahneyi görüntülemek için bir görüntüleyiciden oluşan bir yazılımdan oluşmaktadır. Kayıt için, genel olarak tutarlı bir sahne yaratmayı amaçlayan küresel gevşeme yöntemlerinin yanı sıra farklı ICP en aza indirme algoritmaları da seçilebilir. Nokta bulutları için çeşitli formatlar desteklenmekte, yeni formatlar kolayca uygulanabilmektedir.
 
+Projemiz ile ilgili örnek resimler:
+
+image::indoor.png[indoor,640,320,align="center"]
+
+image::outdoor.png[outdoor,640,320,align="center"]
+
+
 Kullandığımız işletim sistemi: Ubuntu 14.04 İndigo(Sanal Makina)
 
 Proje kaynak kodlarını elde etmek için tüm işletim sistemlerine uygun olan cmake kurulumunu yaptık.
@@ -20,14 +27,13 @@ Ubuntu cmake kurulum komutu:
 ----
 sudo apt-get install cmake
 ----
-Kuulum sonrası terminale aşağıdaki komut yazılarak kaynak kodları elde edildi.
+Kurulum sonrası terminale aşağıdaki komut yazılarak kaynak kodları elde edildi.
 [source,java]
 ----
 svn co https://svn.openslam.org/data/svn/slam6d
 ----
 Kaynak kodları indirdikten sonra içerisindeki *readme.txt* ve *install.txt* dosyalarını inceledik.
 Kodları çalıştırmak için *install.txt* dosyası içeriğini takip ettik.
-
 
 Aşağıda bu adımlara ve bu adımları uygularken elde ettiğimiz görüntülere yer vereceğiz.
 
@@ -80,4 +86,6 @@ bin/slam6D dat
 ----
 bin/show dat
 ----
-image::soncikti.png[soncikti,240,320,align="center"]
+Bu işlem sonucu elde ettiğimiz sonuç çıktısı aşağıdadır.
+
+image::soncikti.png[soncikti,640,320,align="center"]
