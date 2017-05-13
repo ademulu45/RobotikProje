@@ -194,7 +194,7 @@ for (int i = 0; i < openmp_num_threads; i++) {
 
 ----
 
-image::k3.png[indoor,360,180,align="center"]
+image::k3.png[indoor,240,180,align="center"]
 
 (icp6Dsvd.cc)
 
@@ -212,7 +212,7 @@ Matrix U(3,3);
 
 ----
 
-image::k4.png[indoor,160,80,align="center"]
+image::k4.png[indoor,240,160,align="center"]
 
 [source, C++]
 ----
