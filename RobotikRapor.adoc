@@ -73,7 +73,7 @@ $ bin/slam6D dat
 
 ----
 
-image::resimler\1.png[]
+image::1.png[indoor,480,320,align="center"]
 
 ----
 
@@ -81,7 +81,7 @@ $ bin/show dat
 
 ----
 
-image::resimler\2.png[]
+image::2.png[indoor,480,320,align="center"]
 
 == 2. Programın Farklı Veri Seti Üzerinde Denenmesi
 
@@ -89,7 +89,7 @@ Program, varsayılan veri seti dışında başka bir veri seti ile çalışıtı
 
 _3 boyutlu veriler aşağıdaki şekilde hava bazlı elde edilmiştir:_
 
-image::resimler/3.png[]
+image::3.png[indoor,480,320,align="center"]
 
 Bu veri setini programa verip görselleştirmek içinde varsayılan verinin çalıştırılmasından farklı olarak komutlar şu şekilde değişitrilmektedir.
 
@@ -111,9 +111,11 @@ bin/show -s 1 -e 65 /home/nuechter/dat/dat_hannover1
 
 Bu komutların sonucunda elde edilen görüntü şu şekildedir:
 
-image::resimler\4.png[]
-image::resimler\5.png[]
-image::resimler\6.png[]
+image::4.png[indoor,480,320,align="center"]
+
+image::5.png[indoor,480,320,align="center"]
+
+image::6.png[indoor,480,320,align="center"]
 
 == 3. Algoritmanın Kod İçerisinde Bulunması
 
@@ -153,8 +155,9 @@ Projenin main fonksiyonu *src/slam6d* dizinindeki *slam6D.cc* dosyasının içer
 
 ==== Dönüşüm ve Çevrimin Hesaplanması
 
-image::resimler\k1.png[]
-image::resimler\k2.png[]
+image::k1.png[indoor,480,320,align="center"]
+
+image::k2.png[indoor,480,320,align="center"]
 
 (icp6Dquat.cc)
 
@@ -191,7 +194,7 @@ for (int i = 0; i < openmp_num_threads; i++) {
 
 ----
 
-image::resimler\k3.png[]
+image::k3.png[indoor,480,320,align="center"]
 
 (icp6Dsvd.cc)
 
@@ -209,7 +212,7 @@ Matrix U(3,3);
 
 ----
 
-image::resimler\k4.png[]
+image::k4.png[indoor,480,320,align="center"]
 
 [source, C++]
 ----
@@ -243,7 +246,8 @@ image::resimler\k4.png[]
 ==== ICP tabanlı 6D Slam 
 
 
-image::resimler\k5.png[]
+image::k5.png[indoor,480,320,align="center"]
+
 (elch6Deuler.cc)
 
 [source, C++]
