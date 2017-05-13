@@ -155,9 +155,9 @@ Projenin main fonksiyonu *src/slam6d* dizinindeki *slam6D.cc* dosyasının içer
 
 ==== Dönüşüm ve Çevrimin Hesaplanması
 
-image::k1.png[indoor,480,320,align="center"]
+image::k1.png[indoor,480,160,align="center"]
 
-image::k2.png[indoor,480,320,align="center"]
+image::k2.png[indoor,320,160,align="center"]
 
 (icp6Dquat.cc)
 
@@ -194,7 +194,7 @@ for (int i = 0; i < openmp_num_threads; i++) {
 
 ----
 
-image::k3.png[indoor,480,320,align="center"]
+image::k3.png[indoor,360,180,align="center"]
 
 (icp6Dsvd.cc)
 
@@ -212,7 +212,7 @@ Matrix U(3,3);
 
 ----
 
-image::k4.png[indoor,480,320,align="center"]
+image::k4.png[indoor,160,80,align="center"]
 
 [source, C++]
 ----
@@ -246,7 +246,7 @@ image::k4.png[indoor,480,320,align="center"]
 ==== ICP tabanlı 6D Slam 
 
 
-image::k5.png[indoor,480,320,align="center"]
+image::k5.png[indoor,480,240,align="center"]
 
 (elch6Deuler.cc)
 
