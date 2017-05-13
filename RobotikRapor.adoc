@@ -1,3 +1,4 @@
+:imagesdir: Resimler
 = SLAM 6D
 
 == 1. Kodların İndirilmesi, Derlenmesi ve Gerekli Bağımlılıkların Kurulması
