@@ -100,4 +100,18 @@ image::soncikti.png[soncikti,800,480,align="center"]
 
 ==== Kaynak Klasör İçindeki Dokümanların İncelenmesi
 
+==== Baaska veri seti ile calistirmasi
+
+Bu veri seti http://kos.informatik.uni-osnabrueck.de/3Dscans/ Hannover1 adli veri seti kullandik,çunku boyut olarak idealdi. Diğer veri setiler büyük boyutla olduğu için test edemedik. Veri indirtikren sonra, verinin lokasiyoun aldiktan sonra 
+*Bu komutu calismamiz lazim, veriler test etmek icin*[source,java]
+----
+/slam6d-code$ bin/show -s 1 -e65 /home/huse/Desktop/hannover1
+----
+komutu ile :
+image::Hanover_dataSet1.PNG.png[adim9,480,320,align="center"]
+
+image::Hanover_dataSet2.PNG.png[adim9,480,320,align="center"]
+
+image::Hanover_dataSet.PNG.png[adim9,480,320,align="center"]
+
 
