@@ -100,6 +100,7 @@ image::soncikti.png[soncikti,800,480,align="center"]
 
 ==== Kaynak Klasör İçindeki Dokümanların İncelenmesi
 
+
 ==== Baaska veri seti ile calistirmasi
 
 Bu veri seti http://kos.informatik.uni-osnabrueck.de/3Dscans/ Hannover1 adli veri seti kullandik,çunku boyut olarak idealdi. Diğer veri setiler büyük boyutla olduğu için test edemedik. Veri indirtikren sonra, verinin lokasiyoun aldiktan sonra 
