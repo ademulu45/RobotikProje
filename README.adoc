@@ -110,10 +110,10 @@ Bu veri seti http://kos.informatik.uni-osnabrueck.de/3Dscans/ Hannover1 adli ver
 ----
 komutu ile :
 
-image::Hanover_dataSet1.png[Hanover_dataSet1,480,320,align="center"]
+image::Hanover_dataSet1.PNG[Hanover_dataSet1,480,80,align="center"]
 
-image::Hanover_dataSet2.png[Hanover_dataSet2,480,320,align="center"]
+image::Hanover_dataSet2.PNG[Hanover_dataSet2,480,320,align="center"]
 
-image::Hanover_dataSet.png[Hanover_dataSet,480,320,align="center"]
+image::Hanover_dataSet.PNG[Hanover_dataSet,480,320,align="center"]
 
 
