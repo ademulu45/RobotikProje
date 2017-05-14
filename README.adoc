@@ -9,7 +9,7 @@ Husein SKRİJELJ-120201113
 
 == SLAM6D - Simultaneous Localization and Mapping with 6 DoF
 
-Proje Hakkında Açıklama
+==== Proje Hakkında Açıklama
 Bu proje, 3D nokta bulutlarını ortak bir koordinat sistemine kaydetmenin yanı sıra sahneyi görüntülemek için bir görüntüleyiciden oluşan bir yazılımdan oluşmaktadır. Kayıt için, genel olarak tutarlı bir sahne yaratmayı amaçlayan küresel gevşeme yöntemlerinin yanı sıra farklı ICP en aza indirme algoritmaları da seçilebilir. Nokta bulutları için çeşitli formatlar desteklenmekte, yeni formatlar kolayca uygulanabilmektedir.
 
 Projemiz ile ilgili örnek resimler:
@@ -97,3 +97,7 @@ bin/show dat
 Bu işlem sonucu elde ettiğimiz sonuç çıktısı aşağıdadır.
 
 image::soncikti.png[soncikti,800,480,align="center"]
+
+==== Kaynak Klasör İçindeki Dokümanların İncelenmesi
+
+
