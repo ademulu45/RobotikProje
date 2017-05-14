@@ -114,6 +114,6 @@ image::Hanover_dataSet1.PNG[Hanover_dataSet1,480,80,align="center"]
 
 image::Hanover_dataSet2.PNG[Hanover_dataSet2,480,320,align="center"]
 
-image::Hanover_dataSet.PNG[Hanover_dataSet,480,320,align="center"]
+image::Hanover_dataSet.PNG[Hanover_dataSet,800,480,align="center"]
 
 
