@@ -7,7 +7,7 @@ Gökçe EMİRBUYURAN-110201112
 
 Husein SKRİJELJ-120201113
 
-= 1.SLAM6D - Simultaneous Localization and Mapping with 6 DoF
+== 1.SLAM6D - Simultaneous Localization and Mapping with 6 DoF
 
 ==== Proje Hakkında Açıklama
 Bu proje, 3D nokta bulutlarını ortak bir koordinat sistemine kaydetmenin yanı sıra sahneyi görüntülemek için bir görüntüleyiciden oluşan bir yazılımdan oluşmaktadır. Kayıt için, genel olarak tutarlı bir sahne yaratmayı amaçlayan küresel gevşeme yöntemlerinin yanı sıra farklı ICP en aza indirme algoritmaları da seçilebilir. Nokta bulutları için çeşitli formatlar desteklenmekte, yeni formatlar kolayca uygulanabilmektedir.
@@ -98,7 +98,7 @@ Bu işlem sonucu elde ettiğimiz sonuç çıktısı aşağıdadır.
 
 image::soncikti.png[soncikti,800,480,align="center"]
 
-== 1.1 KAYNAK KLASÖR İÇİNDEKİ DÖKÜMANLARIN İNCELENMESİ
+=== 1.1 KAYNAK KLASÖR İÇİNDEKİ DÖKÜMANLARIN İNCELENMESİ
 
 PROJEKSİYON TABANLI 3D LAZER TARAYICI
 
@@ -147,7 +147,7 @@ Kullanılmış kümeler daha yüksek örtüşme (daha küçük dönme açısı) 
 image::_3DLaserScanner-3.png[_3DLaserScanner-3,480,320,align="center"]
 
 
-= 2.Projenin Baska veri seti ile çalıştırılması
+== 2.Projenin Baska veri seti ile çalıştırılması
 
 Bu veri seti http://kos.informatik.uni-osnabrueck.de/3Dscans/ Hannover1 adli veri seti kullandik,çunku boyut olarak idealdi. Diğer veri setiler büyük boyutla olduğu için test edemedik. Veri indirtikren sonra, verinin lokasiyoun aldiktan sonra 
 *Bu komutu calismamiz lazim, veriler test etmek icin*[source,java]
@@ -167,7 +167,7 @@ Küçük boyuta sahip hannover veri seti üzerinde deneme yapabildik. İşlemler
 
 image::Hanover_dataSet.PNG[Hanover_dataSet,800,480,align="center"]
 
-= 3. Algoritmanın Kod İçerisinde Bulunması
+== 3. Algoritmanın Kod İçerisinde Bulunması
 
 Bu proje, 3D nokta bulutlarını ortak bir koordinat sistemine kaydetmenin yanı sıra sahneyi görüntülemek için bir görüntüleyiciden oluşan bir yazılımdan oluşmaktadır. Kayıt için, genel olarak tutarlı bir sahne yaratmayı amaçlayan küresel gevşeme yöntemlerinin yanı sıra farklı ICP en aza indirme algoritmaları da seçilebilir. Nokta bulutları için çeşitli formatlar desteklenmekte, yeni formatlar kolayca uygulanabilmektedir.
 
