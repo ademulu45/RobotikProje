@@ -98,7 +98,7 @@ Bu işlem sonucu elde ettiğimiz sonuç çıktısı aşağıdadır.
 
 image::soncikti.png[soncikti,800,480,align="center"]
 
-=== 1.1 KAYNAK KLASÖR İÇİNDEKİ DÖKÜMANLARIN İNCELENMESİ
+=== 1.1 Kaynak Klasör İçindeki Dökümanların İncelenmesi
 
 PROJEKSİYON TABANLI 3D LAZER TARAYICI
 
