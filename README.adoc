@@ -203,46 +203,23 @@ rPostheta[3] |  n. ‘inci 3D Taramanın Rotasyonu
 
 Projenin main fonksiyonu *src/slam6d* dizinindeki *slam6D.cc* dosyasının içerisinde yer almaktadır.
 
+Kaynak code klasör yolu:
+
+image::kaynakcode.PNG[indoor,480,160,align="center"]
+
 ==== Dönüşüm ve Çevrimin Hesaplanması
 
 image::k1.png[indoor,480,160,align="center"]
 
 image::k2.png[indoor,320,160,align="center"]
 
-(icp6Dquat.cc)
 
-[source, C++]
-----
+Bu formüllerin kullanıldığı code dosyasının yolu:
 
-for (int i = 0; i < openmp_num_threads; i++) {
-    s += sum[i];
-    pairs_size += n[i];
-    cm[0] += n[i] * centroid_m[i][0];
-    cm[1] += n[i] * centroid_m[i][1];
-    cm[2] += n[i] * centroid_m[i][2];
-    cd[0] += n[i] * centroid_d[i][0];
-    cd[1] += n[i] * centroid_d[i][1];
-    cd[2] += n[i] * centroid_d[i][2];
-  }
-  cm[0] /= pairs_size;
-  cm[1] /= pairs_size;
-  cm[2] /= pairs_size;
-  cd[0] /= pairs_size;
-  cd[1] /= pairs_size;
-  cd[2] /= pairs_size;
 
-// calculate the cross covariance matrix
-  // formula (5)
-  for (int i = 0; i < openmp_num_threads; i++) {
-    for(int j = 0; j < 3; j++){
-      for(int k = 0; k < 3; k++){
-        S[j][k] += Si[i][k*3+j]
-          + n[i] * ((centroid_d[i][j] - cd[j]) * (centroid_m[i][k] - cm[k])) ;
-      }
-    }
-  }
+image::formul4.png[indoor,240,180,align="center"]
 
-----
+image::formula5.png[indoor,240,180,align="center"]
 
 image::k3.png[indoor,240,180,align="center"]
 
