@@ -113,7 +113,7 @@ Nesnenin 3D modellenmesi
 3D nokta bulutu(X,Y,Z)
 Nokta renkleri(R,G,B)
 
-image::3D-laser-scanner.png[adim9,480,320,align="center"]
+image::3D laser scanner-1.png[adim9,480,320,align="center"]
 
 *ADIM 1:* Laser Çizgileri Algılama
 Her çerçeve için lazer çizgisi olmayan çerçeve farkı hesaplanır.
@@ -122,7 +122,7 @@ Kırmızı pikselleri bulunur ve vurgulanır.
 2'den daha az kırmızı komşusu olan tüm kırmızı pikselleri çıkarıp gürültünün bir kısmından kurtulun
 Hatları algılamak için Hough dönüşümünü kullanılır ve yeşil renkte çizilir
 
-image::1-3D-laser-scanner.png[adim9,480,320,align="center"]
+image::3D laser scanner-2.png[adim9,480,320,align="center"]
 
 *ADIM 2:* 3D Object Points
 Nesneye ait olan noktaların pikselleri göz önüne alındığında, 3D nokta bulutu almak istiyoruz.
@@ -145,7 +145,7 @@ Olası nedeni:
 .pose dosyalarının manuel olarak ayarlanması hatalara açıktır.
 Kullanılmış kümeler daha yüksek örtüşme (daha küçük dönme açısı) gerektirebilir.
 
-image::2-3D-laser-scanner.png[adim9,480,320,align="center"]
+image::3D laser scanner-3.png[adim9,480,320,align="center"]
 
 ==== Baska veri seti ile calistirmasi
 
