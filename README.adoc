@@ -100,9 +100,10 @@ image::soncikti.png[soncikti,800,480,align="center"]
 
 ==== KAYNAK KLASÖR İÇİNDEKİ DÖKÜMANLARIN İNCELENMESİ
 
-==PROJEKSİYON TABANLI 3D LAZER TARAYICI
+== PROJEKSİYON TABANLI 3D LAZER TARAYICI
 
-=Kurulum ve Hedef
+= Kurulum ve Hedef
+
 Kurulum
 Video,bir lazer çizgisinin nesnenin üzerinde hareket ettiği, köşede yer alıyor.
 -90 derece açı bulunuyor.
@@ -117,6 +118,7 @@ Nokta renkleri(R,G,B)
 
 image::3D laser scanner-1.png[3D laser scanner-1,480,320,align="center"]
 
+
 *ADIM 1:* Laser Çizgileri Algılama
 Her çerçeve için lazer çizgisi olmayan çerçeve farkı hesaplanır.
 Kırmızı pikselleri bulunur ve vurgulanır.
@@ -124,6 +126,7 @@ Kırmızı pikselleri bulunur ve vurgulanır.
 Hatları algılamak için Hough dönüşümünü kullanılır ve yeşil renkte çizilir
 
 image::3D laser scanner-2.png[3D laser scanner-2,480,320,align="center"]
+
 
 *ADIM 2:* 3D nesne noktaları
 Nesneye ait olan noktaların pikselleri göz önüne alındığında, 3D nokta bulutu almak istiyoruz.
@@ -142,6 +145,7 @@ Olası nedeni:
 Kullanılmış kümeler daha yüksek örtüşme (daha küçük dönme açısı) gerektirebilir.
 
 image::3D laser scanner-3.png[3D laser scanner-3,480,320,align="center"]
+
 
 ==== Baska veri seti ile calistirmasi
 
