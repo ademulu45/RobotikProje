@@ -32,6 +32,9 @@ Kurulum sonrası terminale aşağıdaki komut yazılarak kaynak kodları elde ed
 ----
 svn co https://svn.openslam.org/data/svn/slam6d
 ----
+
+image::_1.png[_1,480,320,align="center"]
+
 Kaynak kodları indirdikten sonra içerisindeki *readme.txt* ve *install.txt* dosyalarını inceledik.
 Kodları çalıştırmak için *install.txt* dosyası içeriğini takip ettik.
 
@@ -51,6 +54,9 @@ sudo apt-get update
 ----
 sudo apt-get install --no-install-recommends equivs subversion
 ----
+
+image::_2.png[_2,480,320,align="center"]
+
 *4.Adım:* Klasör değiştirme işlemi.
 [source,java]
 ----
