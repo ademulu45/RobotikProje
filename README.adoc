@@ -135,7 +135,8 @@ Kameradan ve lazer düzleminden başlayarak ışınların kesiştiği noktalar o
 
 Nokta bulutunu görüntülemek için görüntüleme programı kullanılır.
 
-*ADIM 3:* 
+*ADIM 3:*
+
 == Using SLAM6D
 Teorik olarak slam6D programı, birkaç nokta bulutunu eşleştirebilir ve bunları aynı referans çerçevesine yerleştirebilir.
 Pratikte, birden fazla veri seti kullanırken eşleştirme işlemi çok iyi sonuç vermedi.
