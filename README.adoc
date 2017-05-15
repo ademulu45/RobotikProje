@@ -98,9 +98,9 @@ Bu işlem sonucu elde ettiğimiz sonuç çıktısı aşağıdadır.
 
 image::soncikti.png[soncikti,800,480,align="center"]
 
-==== KAYNAK KLASÖR İÇİNDEKİ DÖKÜMANLARIN İNCELENMESİ
+== KAYNAK KLASÖR İÇİNDEKİ DÖKÜMANLARIN İNCELENMESİ
 
-== PROJEKSİYON TABANLI 3D LAZER TARAYICI
+= PROJEKSİYON TABANLI 3D LAZER TARAYICI
 
 = Kurulum ve Hedef
 
