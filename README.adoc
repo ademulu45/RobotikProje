@@ -112,7 +112,12 @@ komutu ile :
 
 image::Hanover_dataSet1.PNG[Hanover_dataSet1,480,80,align="center"]
 
+Aşağıdaki veri seti üzerinde işlem yapmaya çalıştık. Ancak veri seti boyutu 8.8 gb gibi büyük bir değer olduğu için sanal makine için sıkıntı oluşabileceğinden dolayı kullanamadık.
+
 image::Hanover_dataSet2.PNG[Hanover_dataSet2,480,320,align="center"]
+
+Küçük boyuta sahip hannover veri seti üzerinde deneme yapabildik. İşlemler sonucunda elde ettiğimiz görüntü aşağıda yer almaktadır.
+
 
 image::Hanover_dataSet.PNG[Hanover_dataSet,800,480,align="center"]
 
