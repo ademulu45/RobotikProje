@@ -116,7 +116,7 @@ Nesnenin 3D modellenmesi
 3D nokta bulutu(X,Y,Z)
 Nokta renkleri(R,G,B)
 
-image::3DLaserScanner-1.png[3DLaserScanner-1,480,320,align="center"]
+image::_3DLaserScanner-1.png[_3DLaserScanner-1,480,320,align="center"]
 
 
 *ADIM 1:* Laser Çizgileri Algılama
@@ -125,7 +125,7 @@ Kırmızı pikselleri bulunur ve vurgulanır.
 2'den daha az kırmızı komşusu olan tüm kırmızı pikselleri çıkarıp gürültünün bir kısmından kurtulun.
 Hatları algılamak için Hough dönüşümünü kullanılır ve yeşil renkte çizilir
 
-image::3DLaserScanner-2.png[3DLaserScanner-2,480,320,align="center"]
+image::_3DLaserScanner-2.png[_3DLaserScanner-2,480,320,align="center"]
 
 
 *ADIM 2:* 3D nesne noktaları
@@ -144,7 +144,7 @@ Olası nedeni:
 .pose dosyalarının manuel olarak ayarlanması hatalara açıktır.
 Kullanılmış kümeler daha yüksek örtüşme (daha küçük dönme açısı) gerektirebilir.
 
-image::3DLaserScanner-3.png[3DLaserScanner-3,480,320,align="center"]
+image::_3DLaserScanner-3.png[_3DLaserScanner-3,480,320,align="center"]
 
 
 ==== Baska veri seti ile calistirmasi
