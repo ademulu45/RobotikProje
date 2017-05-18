@@ -2,12 +2,12 @@
 
 120201019 Adem ULU
 
-== Çapraz Ödev Konu :DP SLAM 2.0
+== Çapraz Ödev Konu :DP SLAM
 
 Proje github linkine gidilip zip olarak indirilmiş.
-Github Indirme Linki= https://github.com/jordant0/DP-SLAM/tree/master/dp-slam 
+*Github Indirme Linki=* https://github.com/jordant0/DP-SLAM/tree/master/dp-slam 
 
-*Bulunan farklı dataset linki= http://www.cs.duke.edu/~parr/dpslam/*
+*Bulunan farklı dataset linki=* http://www.cs.duke.edu/~parr/dpslam/
 
 ==== Projenin çalıştırılması için gerekli olanlar:
 
@@ -22,41 +22,39 @@ Github Indirme Linki= https://github.com/jordant0/DP-SLAM/tree/master/dp-slam
 sudo apt-get install imagemagick
 ----
 
-Kurulum için bu link incelenebilir: https://tecadmin.net/install-imagemagick-on-linux/#
+* Kurulum için bu link incelenebilir: https://tecadmin.net/install-imagemagick-on-linux/#
 
 ==== Projenin çalıştırılması
 
-Dp-slam klasörü indirildikten sonra ve ImageMagicks programı kurulduktan sonra bu terminalde aşagıdaki işlemler yapılır.
+* Dp-slam klasörü indirildikten sonra ve ImageMagicks programı kurulduktan sonra bu terminalde aşagıdaki işlemler yapılır.
 
 
 image::dpslam1.PNG[indoor,480,320,align="center"]
 
 
-== Uygulamayı başlatmak için aşağıdaki kod yazılır. Böylece algoritma loop5.log datasını işlemeye başlar
+* Uygulamayı başlatmak için aşağıdaki kod yazılır. Böylece algoritma loop5.log datasını işlemeye başlar
 
 [source,java]
 ----
 ./slam -p loop5.log 
 ----
 
-Sonrasında çalışan işlem görselleri:
+* Sonrasında çalışan işlem görselleri:
 
 image::dpslam2.PNG[indoor,480,320,align="center"]
 
 image::dpslam3.PNG[indoor,480,320,align="center"]
 
-DpSlam klasörü içerisinde kullanılan veri setleri mevcuttur.
+* DpSlam klasörü içerisinde kullanılan veri setleri mevcuttur.
 
 image::data1.PNG[indoor,480,320,align="center"]
 
 image::data2.PNG[indoor,480,320,align="center"]
 
-*Data işlendikçe harita görselleri oluşmaya başlar.*
-
-*Haritaların tümü ve ve tüm sonuçlar yine aynı klasör içerisinde mevcuttur.*
+* Data işlendikçe harita görselleri oluşmaya başlar.Haritaların tümü ve ve tüm sonuçlar yine aynı klasör içerisinde mevcuttur.
 
 image::sonuc.PNG[indoor,480,320,align="center"]
 
-*Son adımda oluşan haritalardan bir kaçı böyledir:*
+* Son adımda oluşan haritalardan bir kaçı böyledir:
 
-image::haritalar.PNG[indoor,480,320,align="center"]
+image::haritalar.PNG[indoor,640,480,align="center"]
