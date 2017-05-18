@@ -28,34 +28,35 @@ Kurulum için bu link incelenebilir: https://tecadmin.net/install-imagemagick-on
 
 Dp-slam klasörü indirildikten sonra ve ImageMagicks programı kurulduktan sonra bu terminalde aşagıdaki işlemler yapılır.
 
-image::dpslam1.PNG[]
+
+image::dpslam1.PNG[indoor,480,320,align="center"]
 
 
 == Uygulamayı başlatmak için aşağıdaki kod yazılır. Böylece algoritma loop5.log datasını işlemeye başlar
 
 [source,java]
 ----
-'./slam -p loop5.log' 
+./slam -p loop5.log 
 ----
 
 Sonrasında çalışan işlem görselleri:
 
-image::dpslam2.PNG[]
+image::dpslam2.PNG[indoor,480,320,align="center"]
 
-image::dpslam3.PNG[]
+image::dpslam3.PNG[indoor,480,320,align="center"]
 
 DpSlam klasörü içerisinde kullanılan veri setleri mevcuttur.
 
-image::data1.PNG[]
+image::data1.PNG[indoor,480,320,align="center"]
 
-image::data2.PNG[]
+image::data2.PNG[indoor,480,320,align="center"]
 
 *Data işlendikçe harita görselleri oluşmaya başlar.*
 
 *Haritaların tümü ve ve tüm sonuçlar yine aynı klasör içerisinde mevcuttur.*
 
-image::sonuc.PNG[]
+image::sonuc.PNG[indoor,480,320,align="center"]
 
 *Son adımda oluşan haritalardan bir kaçı böyledir:*
 
-image::haritalar.PNG[]
+image::haritalar.PNG[indoor,480,320,align="center"]
