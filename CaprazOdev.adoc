@@ -52,9 +52,10 @@ image::data2.PNG[]
 
 *Data işlendikçe harita görselleri oluşmaya başlar.*
 
-*Haritaların tümü yine aynı klasör içerisinde mevcuttur.*
+*Haritaların tümü ve ve tüm sonuçlar yine aynı klasör içerisinde mevcuttur.*
+
+image::sonuc.PNG[]
 
 *Son adımda oluşan haritalardan bir kaçı böyledir:*
 
-image::dpslam4.PNG[]
-
+image::haritalar.PNG[]
