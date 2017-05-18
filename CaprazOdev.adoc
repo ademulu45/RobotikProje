@@ -15,7 +15,7 @@ Github Indirme Linki= https://github.com/jordant0/DP-SLAM/tree/master/dp-slam
 * laser scan_data (loop5.log)
 * ImageMagick resim dönüştürücüsü
 
-==== ImageMagick Kurulumu
+==== ImageMagick Kurulum Komutu
 
 [source,java]
 ----
@@ -28,7 +28,7 @@ Kurulum için bu link incelenebilir: https://tecadmin.net/install-imagemagick-on
 
 Dp-slam klasörü indirildikten sonra ve ImageMagicks programı kurulduktan sonra bu terminalde aşagıdaki işlemler yapılır.
 
-image::1.PNG[]
+image::dpslam1.PNG[]
 
 
 == Uygulamayı başlatmak için aşağıdaki kod yazılır. Böylece algoritma loop5.log datasını işlemeye başlar
@@ -40,14 +40,21 @@ image::1.PNG[]
 
 Sonrasında çalışan işlem görselleri:
 
-image::2.PNG[]
+image::dpslam2.PNG[]
 
-image::3.PNG[]
+image::dpslam3.PNG[]
 
+DpSlam klasörü içerisinde kullanılan veri setleri mevcuttur.
+
+image::data1.PNG[]
+
+image::data2.PNG[]
 
 *Data işlendikçe harita görselleri oluşmaya başlar.*
 
-*Son adımda oluşan harita ise böyledir:*
+*Haritaların tümü yine aynı klasör içerisinde mevcuttur.*
 
-image::4.PNG[]
+*Son adımda oluşan haritalardan bir kaçı böyledir:*
+
+image::dpslam4.PNG[]
 
