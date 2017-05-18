@@ -5,6 +5,7 @@
 == Çapraz Ödev Konu :DP SLAM
 
 Proje github linkine gidilip zip olarak indirilmiş.
+
 *Github Indirme Linki=* https://github.com/jordant0/DP-SLAM/tree/master/dp-slam 
 
 *Bulunan farklı dataset linki=* http://www.cs.duke.edu/~parr/dpslam/
@@ -22,7 +23,7 @@ Proje github linkine gidilip zip olarak indirilmiş.
 sudo apt-get install imagemagick
 ----
 
-* Kurulum için bu link incelenebilir: https://tecadmin.net/install-imagemagick-on-linux/#
+*Kurulum için bu link incelenebilir:* https://tecadmin.net/install-imagemagick-on-linux/#
 
 ==== Projenin çalıştırılması
 
@@ -57,4 +58,4 @@ image::sonuc.PNG[indoor,480,320,align="center"]
 
 * Son adımda oluşan haritalardan bir kaçı böyledir:
 
-image::haritalar.PNG[indoor,640,480,align="center"]
+image::haritalar.PNG[indoor,640,320,align="center"]
