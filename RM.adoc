@@ -1,48 +1,53 @@
-:imagesdir: resimler
+:imagesdir: Resimler
 
-*130202017 Büşra Ceren SÖNMEZ*
+120201019 Adem ULU
 
-*130202055 Kardelen TUNÇ*
+== Çapraz Ödev Konu :DP SLAM 2.0
 
-*Konu Adı: DP SLAM 2.0*
-
-Indir= https://github.com/jordant0/DP-SLAM/tree/master/dp-slam 
+Proje github linkine gidilip zip olarak indirilmiş.
+Github Indirme Linki= https://github.com/jordant0/DP-SLAM/tree/master/dp-slam 
 
 *Bulunan farklı dataset linki= http://www.cs.duke.edu/~parr/dpslam/*
 
-*Projenin çalıştırılması için gerekli olanlar:*
+==== Projenin çalıştırılması için gerekli olanlar:
 
 * rosbag
 * laser scan_data (loop5.log)
 * ImageMagick resim dönüştürücüsü
 
-*Projenin çalıştırılması*
+==== ImageMagick Kurulumu
 
-*öncelikle dp-slam klasörünün içeriğinin eksiksiz olması ve ImageMagicks programının kurulması gerekir.*
+[source,java]
+----
+sudo apt-get install imagemagick
+----
 
-image::dpslam.jpg[]
+Kurulum için bu link incelenebilir: https://tecadmin.net/install-imagemagick-on-linux/#
 
-image::icerik.jpg[]
+==== Projenin çalıştırılması
 
-*Daha sonra terminalde dp-slam algoritmasının olduğu konuma gidilir ve sırasıyla *
+Dp-slam klasörü indirildikten sonra ve ImageMagicks programı kurulduktan sonra bu terminalde aşagıdaki işlemler yapılır.
 
-'make' 
+image::1.PNG[]
 
-*ve* 
 
+== Uygulamayı başlatmak için aşağıdaki kod yazılır. Böylece algoritma loop5.log datasını işlemeye başlar
+
+[source,java]
+----
 './slam -p loop5.log' 
+----
 
-komutları yazılır, böylece algoritma loop5.log datasını işlemeye başlar.*
+Sonrasında çalışan işlem görselleri:
 
-image::data1.jpg[]
+image::2.PNG[]
 
-image::data2.jpg[]
+image::3.PNG[]
+
 
 *Data işlendikçe harita görselleri oluşmaya başlar.*
 
-image::harita1.jpg[]
-
 *Son adımda oluşan harita ise böyledir:*
 
-image::harita2.jpg[]
+image::4.PNG[]
 
