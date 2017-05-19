@@ -228,6 +228,7 @@ image::formul4.PNG[]
 image::formula5.PNG[]
 
 *Formül 6:*
+
 image::k2.png[k2,320,160,align="center"]
 image::formul6.PNG[]
 
