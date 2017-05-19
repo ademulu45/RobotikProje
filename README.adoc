@@ -216,39 +216,27 @@ Projenin main fonksiyonu *src/slam6d* dizinindeki *slam6D.cc* dosyasının içer
 
 Kaynak code klasör yolu:
 
-image::kaynakcode.PNG[indoor,480,160,align="center"]
+image::kaynakcode.PNG[kaynakcode,480,160,align="center"]
 
 ==== Dönüşüm ve Çevrimin Hesaplanması
 
-image::k1.png[indoor,480,160,align="center"]
+image::k1.png[k1,480,160,align="center"]
 
-image::k2.png[indoor,320,160,align="center"]
+image::k2.png[k2,320,160,align="center"]
 
 
 Bu formüllerin kullanıldığı code dosyasının yolu:
 
 
-image::formul4.png[indoor,240,180,align="center"]
+image::formul4.PNG[formul4,240,180,align="center"]
 
-image::formula5.png[indoor,240,180,align="center"]
+image::formula5.PNG[formul5,240,180,align="center"]
 
-image::k3.png[indoor,240,180,align="center"]
+image::k3.PNG[k3,240,180,align="center"]
 
 (icp6Dsvd.cc)
 
-[source, C++]
-----
-
-Matrix U(3,3);
-  DiagonalMatrix Lamda(3);
-  Matrix V(3,3);
-  // Make SVD
-  SVD(H, Lamda, U, V);
-
-  // Get rotation
-  R = V*(U.t());
-
-----
+image::rvu.PNG[indoor,240,160,align="center"]
 
 image::k4.png[indoor,240,160,align="center"]
 
