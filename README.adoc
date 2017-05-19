@@ -214,14 +214,13 @@ rPostheta[3] |  n. ‘inci 3D Taramanın Rotasyonu
 
 Projenin main fonksiyonu *src/slam6d* dizinindeki *slam6D.cc* dosyasının içerisinde yer almaktadır.
 
-Klasör içerisinde çok fazla kod mevcuttur. Bu kodların klasör yolu:*slam6d-code>src>slam6d*
+Klasör içerisinde çok fazla kod mevcuttur. Bu kodların klasör yolu: *slam6d-code>src>slam6d*
 
 image::kaynakcode.PNG[kaynakcode,480,160,align="center"]
 
 Bulunabilen kodlar:
 
 image::k1.png[k1,480,160,align="center"]
-image::k2.png[k2,320,160,align="center"]
 
 Bu formüllerin kullanıldığı code dosyasının yolu: *slam6d-code>src>slam6d>icp6Dquat.cc*
 
@@ -229,7 +228,7 @@ image::formul4.PNG[]
 image::formula5.PNG[]
 
 *Formül 6:*
-
+image::k2.png[k2,320,160,align="center"]
 image::formul6.PNG[]
 
 Diğer formüllerden biri için code dosya yolu: *slam6d-code>src>slam6d>icp6Dsvd.cc*
