@@ -214,114 +214,25 @@ rPostheta[3] |  n. ‘inci 3D Taramanın Rotasyonu
 
 Projenin main fonksiyonu *src/slam6d* dizinindeki *slam6D.cc* dosyasının içerisinde yer almaktadır.
 
-Kaynak code klasör yolu:
+Klasör içerisinde çok fazla kod mevcuttur. Bu kodların klasör yolu:*slam6d-code>src>slam6d*
 
 image::kaynakcode.PNG[kaynakcode,480,160,align="center"]
 
-==== Dönüşüm ve Çevrimin Hesaplanması
+Bulunabilen kodlar:
 
 image::k1.png[k1,480,160,align="center"]
-
 image::k2.png[k2,320,160,align="center"]
 
+Bu formüllerin kullanıldığı code dosyasının yolu: *slam6d-code>src>slam6d>icp6Dquat.cc*
 
-Bu formüllerin kullanıldığı code dosyasının yolu:
+image::formul4.PNG[]
+image::formula5.PNG[]
 
+*Formül 6:*
 
-image::formul4.PNG[formul4,240,180,align="center"]
+image::formul6.PNG[]
 
-image::formula5.PNG[formul5,240,180,align="center"]
+Diğer formüllerden biri için code dosya yolu: *slam6d-code>src>slam6d>icp6Dsvd.cc*
 
-image::k3.PNG[k3,240,180,align="center"]
-
-(icp6Dsvd.cc)
-
-image::rvu.PNG[indoor,240,160,align="center"]
-
-image::k4.png[indoor,240,160,align="center"]
-
-[source, C++]
-----
-
-// calculate the rotation matrix
-  double m[3][3]; // rot matrix
-  quaternion2matrix(q, m);
-
-  M4identity(alignfx);
-
-  alignfx[0] = m[0][0];
-  alignfx[1] = m[1][0];
-  alignfx[2] = m[2][0];
-  alignfx[3] = 0.0;
-  alignfx[4] = m[0][1];
-  alignfx[5] = m[1][1];
-  alignfx[6] = m[2][1];
-  alignfx[7] = 0.0;
-  alignfx[8] = m[0][2];
-  alignfx[9] = m[1][2];
-  alignfx[10] = m[2][2];
-  alignfx[11] = 0.0;
-
-  // calculate the translation vector,
-  alignfx[12] = cm[0] - m[0][0]*cd[0] - m[0][1]*cd[1] - m[0][2]*cd[2];
-  alignfx[13] = cm[1] - m[1][0]*cd[0] - m[1][1]*cd[1] - m[1][2]*cd[2];
-  alignfx[14] = cm[2] - m[2][0]*cd[0] - m[2][1]*cd[1] - m[2][2]*cd[2];
-
-----
-
-==== ICP tabanlı 6D Slam 
-
-
-image::k5.png[indoor,480,240,align="center"]
-
-(elch6Deuler.cc)
-
-[source, C++]
-----
-
-double delta[6];
-  delta[0] = allScans[last]->get_rPos()[0];
-  delta[1] = allScans[last]->get_rPos()[1];
-  delta[2] = allScans[last]->get_rPos()[2];
-  delta[3] = allScans[last]->get_rPosTheta()[0];
-  delta[4] = allScans[last]->get_rPosTheta()[1];
-  delta[5] = allScans[last]->get_rPosTheta()[2];
-
-  my_icp6D->match(start, end);
-
-  delete start;
-  delete end;
-  
-  delta[0] = allScans[last]->get_rPos()[0] - delta[0];
-  delta[1] = allScans[last]->get_rPos()[1] - delta[1];
-  delta[2] = allScans[last]->get_rPos()[2] - delta[2];
-  delta[3] = allScans[last]->get_rPosTheta()[0] - delta[3];
-  delta[4] = allScans[last]->get_rPosTheta()[1] - delta[4];
-  delta[5] = allScans[last]->get_rPosTheta()[2] - delta[5];
-
-  if(!quiet) {
-    cout << "Delta: " << delta[0] << " " << delta[1] << " " << delta[2]
-         << " " << delta[3] << " " << delta[4] << " " << delta[5] << endl;
-  }
-
-  double rPos[3], rPosTheta[3];
-  for(int i = 1; i < n; i++) {
-    rPos[0] = allScans[i]->get_rPos()[0] +
-      delta[0] * (weights[0][i] - weights[0][0]);
-    rPos[1] = allScans[i]->get_rPos()[1] +
-      delta[1] * (weights[1][i] - weights[1][0]);
-    rPos[2] = allScans[i]->get_rPos()[2] +
-      delta[2] * (weights[2][i] - weights[2][0]);
-    rPosTheta[0] = allScans[i]->get_rPosTheta()[0] +
-      delta[3] * (weights[3][i] - weights[3][0]);
-    rPosTheta[1] = allScans[i]->get_rPosTheta()[1] +
-      delta[4] * (weights[4][i] - weights[4][0]);
-    rPosTheta[2] = allScans[i]->get_rPosTheta()[2] +
-      delta[5] * (weights[5][i] - weights[5][0]);
-
-    allScans[i]->transformToEuler(rPos, rPosTheta,
-                                  Scan::ELCH, i == n-1 ? 2 : 1);
-  }
-
-----
-
+image::k3.png[k3,240,180,align="center"]
+image::rvu.PNG[]
