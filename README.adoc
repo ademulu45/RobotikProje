@@ -57,6 +57,8 @@ sudo apt-get install --no-install-recommends equivs subversion
 
 image::_2.png[_2,480,320,align="center"]
 
+*Daha sonraki adım:* svn checkout svn://svn.code.sf.net/p/slam6d/code/trunk slam6d-code
+
 *4.Adım:* Klasör değiştirme işlemi.
 [source,java]
 ----
