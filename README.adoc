@@ -113,7 +113,8 @@ image::soncikti.png[soncikti,800,480,align="center"]
 
 ====PROJEKSİYON TABANLI 3D LAZER TARAYICI====
 
-=====Kurulum ve Hedef=====
+Kurulum ve Hedef
+
 Kurulum
 
 -Video,bir lazer çizgisinin nesnenin üzerinde hareket ettiği, köşede yer alıyor.
@@ -126,7 +127,8 @@ Kurulum
 
 -Kamera otomatik ayarlanmıyor.
 
-=====HEDEF=====
+HEDEF
+
 -Nesnenin 3D modellenmesi
 
 -3D nokta bulutu(X,Y,Z)
@@ -160,8 +162,8 @@ image::_3DLaserScanner-2.png[_3DLaserScanner-2,480,320,align="center"]
 -Nokta bulutunu görüntülemek için görüntüleme programı kullanılır.
 
 *ADIM 3:*
+SLAM6D kullanımı
 
-=====SLAM6D kullanımı=====
 -Teorik olarak slam6D programı, birkaç nokta bulutunu eşleştirebilir ve bunları aynı referans çerçevesine yerleştirebilir.
 
 -Pratikte, birden fazla veri seti kullanırken eşleştirme işlemi çok iyi sonuç vermedi.
