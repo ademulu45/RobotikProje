@@ -177,6 +177,8 @@ Kullanılmış kümeler daha yüksek örtüşme (daha küçük dönme açısı) 
 
 image::_3DLaserScanner-3.png[_3DLaserScanner-3,480,320,align="center"]
 
+
+
 *Döküman2*:slam6d-code>doc içinde documentation_HL.pdf
 
 6D SLAM -
@@ -228,7 +230,7 @@ R                      double transMat[16]    Matrix Olarak Poz Verin
 
 Koordinat sistemi, y ekseni yukarı doğru, derinlik ekseni z olduğu halde sol taraftan teslim edilmiştir (Şekil 2'ye bakınız). Giriş ve çıkış dosyaları:
 
-1. 3D tarama dosyaları aşağıdaki yapıya sahip olmalıdır:
+1.3D tarama dosyaları aşağıdaki yapıya sahip olmalıdır:
 
 İlk satır, taramanın çözünürlüğünü (w x b), ardından veri noktalarının çizgilerine (X, y, z).
 
@@ -248,7 +250,7 @@ Programların kullanımında ilgili ikili dosyayı başlatmanız yeterlidir.
 
 Her iki uygulama, bir dizi komut satırı parametresi tarafından konfigüre edilebilir;
 
-Özellikle SLAM sisteminin -r / -R azaltma parametrelerine dikkat edin: Yoksa Bunlardan birini kullanarak, kayıt, tüm veri noktalarını girdi olarak kabul ederek aşırı derecede yavaşlıyor. Potansiyel olarak kritik olan diğer parametreler, karşılık gelen nokta çiftlerini (matris girdileri wij, parametre -d) oluşturan noktaların maksimum mesafesinin yanı sıra tarama eşleme veya görüntüleme için kullanılan noktaların (-m) maksimal aralık mesafesidir, özellikle ortadan kaldırmak için kullanılır Outliers (yani, aralık bulucunun maksimum aralık mesafesindeki veri noktaları).
+Özellikle SLAM sisteminin -r / -R azaltma parametrelerine dikkat edin: Yoksa Bunlardan birini kullanarak, kayıt, tüm veri noktalarını girdi olarak kabul ederek aşırı derecede yavaşlıyor. Potansiyel olarak kritik olan diğer parametreler, karşılık gelen nokta çiftlerini (matris girdileri wij, parametre -d) oluşturan noktaların maksimum mesafesinin yanı sıra tarama eşleme veya görüntüleme için kullanılan noktaların (-m) maksimal aralık mesafesidir, özellikle ortadan kaldırmak için kullanılır.(yani, aralık bulucunun maksimum aralık mesafesindeki veri noktaları).
 
 == 2.Projenin Baska veri seti ile çalıştırılması
 
