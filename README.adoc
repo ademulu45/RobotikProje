@@ -111,48 +111,62 @@ image::soncikti.png[soncikti,800,480,align="center"]
 
 === 1.1 Kaynak Klasör İçindeki Dökümanların İncelenmesi
 
-PROJEKSİYON TABANLI 3D LAZER TARAYICI
+====PROJEKSİYON TABANLI 3D LAZER TARAYICI====
 
-Kurulum ve Hedef
-
+=====Kurulum ve Hedef=====
 Kurulum
-Video,bir lazer çizgisinin nesnenin üzerinde hareket ettiği, köşede yer alıyor.
+
+-Video,bir lazer çizgisinin nesnenin üzerinde hareket ettiği, köşede yer alıyor.
+
 -90 derece açı bulunuyor.
+
 -Her iki duvarda dama tahtaları bulunuyor.
+
 -Arkaplanda değişiklik yok.
+
 -Kamera otomatik ayarlanmıyor.
 
-HEDEF
-Nesnenin 3D modellenmesi
-3D nokta bulutu(X,Y,Z)
-Nokta renkleri(R,G,B)
+=====HEDEF=====
+-Nesnenin 3D modellenmesi
+
+-3D nokta bulutu(X,Y,Z)
+
+-Nokta renkleri(R,G,B)
 
 image::_3DLaserScanner-1.png[_3DLaserScanner-1,480,320,align="center"]
 
 
 *ADIM 1:* Laser Çizgileri Algılama
-Her çerçeve için lazer çizgisi olmayan çerçeve farkı hesaplanır.
-Kırmızı pikselleri bulunur ve vurgulanır.
-2'den daha az kırmızı komşusu olan tüm kırmızı pikselleri çıkarıp gürültünün bir kısmından kurtulun.
-Hatları algılamak için Hough dönüşümünü kullanılır ve yeşil renkte çizilir
+-Her çerçeve için lazer çizgisi olmayan çerçeve farkı hesaplanır.
+
+-Kırmızı pikselleri bulunur ve vurgulanır.
+
+-2'den daha az kırmızı komşusu olan tüm kırmızı pikselleri çıkarıp gürültünün bir kısmından kurtulun.
+
+-Hatları algılamak için Hough dönüşümünü kullanılır ve yeşil renkte çizilir
 
 image::_3DLaserScanner-2.png[_3DLaserScanner-2,480,320,align="center"]
 
 
 *ADIM 2:* 3D nesne noktaları
-Nesneye ait olan noktaların pikselleri göz önüne alındığında, 3D nokta bulutu almak istiyoruz.
-Önce kamerayı kalibre etmeniz gerekiyor - İçsel ve dışsal parametreleri bulun.
-Lazer çizgilerinden doğrusal olmayan 3 noktayı alarak lazer düzlemini bulunuz.
-Kameradan ve lazer düzleminden başlayarak ışınların kesiştiği noktalar olarak 3D koordinatları bulun.
-Nokta bulutunu görüntülemek için görüntüleme programı kullanılır.
+-Nesneye ait olan noktaların pikselleri göz önüne alındığında, 3D nokta bulutu almak istiyoruz.
+
+-Önce kamerayı kalibre etmeniz gerekiyor - İçsel ve dışsal parametreleri bulun.
+
+-Lazer çizgilerinden doğrusal olmayan 3 noktayı alarak lazer düzlemini bulunuz.
+
+-Kameradan ve lazer düzleminden başlayarak ışınların kesiştiği noktalar olarak 3D koordinatları bulun.
+
+-Nokta bulutunu görüntülemek için görüntüleme programı kullanılır.
 
 *ADIM 3:*
 
-SLAM6D kullanımı
-Teorik olarak slam6D programı, birkaç nokta bulutunu eşleştirebilir ve bunları aynı referans çerçevesine yerleştirebilir.
-Pratikte, birden fazla veri seti kullanırken eşleştirme işlemi çok iyi sonuç vermedi.
-Olası nedeni:
-.pose dosyalarının manuel olarak ayarlanması hatalara açıktır.
+=====SLAM6D kullanımı=====
+-Teorik olarak slam6D programı, birkaç nokta bulutunu eşleştirebilir ve bunları aynı referans çerçevesine yerleştirebilir.
+
+-Pratikte, birden fazla veri seti kullanırken eşleştirme işlemi çok iyi sonuç vermedi.
+
+-Olası nedeni:.pose dosyalarının manuel olarak ayarlanması hatalara açıktır.
 Kullanılmış kümeler daha yüksek örtüşme (daha küçük dönme açısı) gerektirebilir.
 
 image::_3DLaserScanner-3.png[_3DLaserScanner-3,480,320,align="center"]
