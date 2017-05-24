@@ -111,7 +111,9 @@ image::soncikti.png[soncikti,800,480,align="center"]
 
 === 1.1 Kaynak Klasör İçindeki Dökümanların İncelenmesi
 
-====PROJEKSİYON TABANLI 3D LAZER TARAYICI====
+*Döküman1*:slam6d-code>doc içinde david_scanner.pdf
+
+PROJEKSİYON TABANLI 3D LAZER TARAYICI
 
 Kurulum ve Hedef
 
@@ -139,6 +141,7 @@ image::_3DLaserScanner-1.png[_3DLaserScanner-1,480,320,align="center"]
 
 
 *ADIM 1:* Laser Çizgileri Algılama
+
 -Her çerçeve için lazer çizgisi olmayan çerçeve farkı hesaplanır.
 
 -Kırmızı pikselleri bulunur ve vurgulanır.
@@ -151,6 +154,7 @@ image::_3DLaserScanner-2.png[_3DLaserScanner-2,480,320,align="center"]
 
 
 *ADIM 2:* 3D nesne noktaları
+
 -Nesneye ait olan noktaların pikselleri göz önüne alındığında, 3D nokta bulutu almak istiyoruz.
 
 -Önce kamerayı kalibre etmeniz gerekiyor - İçsel ve dışsal parametreleri bulun.
@@ -173,6 +177,78 @@ Kullanılmış kümeler daha yüksek örtüşme (daha küçük dönme açısı) 
 
 image::_3DLaserScanner-3.png[_3DLaserScanner-3,480,320,align="center"]
 
+*Döküman2*:slam6d-code>doc içinde documentation_HL.pdf
+
+6D SLAM -
+
+-Bu belgede 6D SLAM algoritmaları açıklanmaktadır.
+
+-Yerelleştirme ve 3D Haritalama sistemi.
+
+-Robot pozu için altı boyut, yani x, y ve z koordinatları ve
+devrilme, sapma ve adım açıları. Doğal yüzeylerde robot hareketi ve lokalizasyonu ele alınmıştır.
+
+*1-Görüntü Kaydı Aralığı ve Robotun Yeniden Yerleşimi*
+
+Oklüzyonsuz ortamları sayısallaştırmak için birden fazla 3D tarama gereklidir. 
+
+Doğru ve tutarlı bir model oluşturmak için, taramalar tek bir koordinat sistemine birleştirilmelidir.
+
+Bu işleme kayıt adı verilir. 3D tarayıcıyı taşıyan robotun tam olarak yerelleştirilmesi durumunda, kayıt doğrudan robotun pozuna dayanarak yapılabilir. Bununla birlikte, istenmeyen robot sensörlerinden dolayı, kendi kendini yerleşim hatalıdır, bu yüzden kayıt için 3D taramaların üst üste binen geometrik yapısı dikkate alınmalıdır.
+
+*1.1 Dönme ve çevirinin hesaplanması*
+
+-Her yinelemede optimal dönüşüm E(R, t) hesaplanmalıdır.
+
+*2 ICP tabanlı 6D SLAM*
+
+-İki 3D taramayı ICP algoritması ile eşleştirmek için, ikinci tarama pozu için yeterli başlangıç tahmininin olması gerekir.
+
+-Odometri okumalarını önceki kayıt matrislerini kullanarak altı serbestlik derecesine çıkarılır.xn+1,yn+1.zn+1.Qx,n+1,Qy,n+1,Qz,n+1
+
+*3-Değişken Yazışma*
+
+(R, t)                double alignxf[16]     Dönüşüm Matrisi
+
+mi, di                class PtPair            Nokta Çifti
+
+cm, cd                double cm[3], cd[3]     ağırlık merkezleri
+
+mi′, di′              double** m, d           Merkezleştirilmiş nokta çiftleri
+
+H, U,ters V, V         Matrix                 SVD Matrisleri             
+
+R                      double transMat[16]    Matrix Olarak Poz Verin
+
+(xn, yn, zn)           double rPos[3]         N. Inci 3D Taramanın Pozisyonu
+
+(Qx,n, Qy,n, Qz,n)     double rPostheta[3]    N. Inci 3D Taramanın Döndürülmesi
+
+*4-Dosya Biçimleri ve Birimleri*
+
+Koordinat sistemi, y ekseni yukarı doğru, derinlik ekseni z olduğu halde sol taraftan teslim edilmiştir (Şekil 2'ye bakınız). Giriş ve çıkış dosyaları:
+
+1. 3D tarama dosyaları aşağıdaki yapıya sahip olmalıdır:
+
+İlk satır, taramanın çözünürlüğünü (w x b), ardından veri noktalarının çizgilerine (X, y, z).
+
+Her 3D tarama ile ilişkili poz dosyaları (scanXXX.pose), ilgili taramanın tahmini pozu hakkında bilgi içerir.
+
+Birinci satır, derece olarak üç çevirme konumu (x, y, z), ikincisi rotasyon aralığı, sapma ve döndürme (ilgili eksen etrafındaki y, y, y, z) içerir.
+
+Robot tarafından tahmin edilmeyen değerler (odometri) 0 olarak ayarlanabilir.
+
+*5-Gereksinimler*
+
+Tüm yürütülebilir dosyalar hem Linux hem de Windows ile derlenebilir ve kullanılabilir.
+
+*6-Kullanım*
+
+Programların kullanımında ilgili ikili dosyayı başlatmanız yeterlidir.
+
+Her iki uygulama, bir dizi komut satırı parametresi tarafından konfigüre edilebilir;
+
+Özellikle SLAM sisteminin -r / -R azaltma parametrelerine dikkat edin: Yoksa Bunlardan birini kullanarak, kayıt, tüm veri noktalarını girdi olarak kabul ederek aşırı derecede yavaşlıyor. Potansiyel olarak kritik olan diğer parametreler, karşılık gelen nokta çiftlerini (matris girdileri wij, parametre -d) oluşturan noktaların maksimum mesafesinin yanı sıra tarama eşleme veya görüntüleme için kullanılan noktaların (-m) maksimal aralık mesafesidir, özellikle ortadan kaldırmak için kullanılır Outliers (yani, aralık bulucunun maksimum aralık mesafesindeki veri noktaları).
 
 == 2.Projenin Baska veri seti ile çalıştırılması
 
